@@ -7,7 +7,7 @@ const userSchema = mongoose.Schema(
       type: String,
     },
    
-    phone_number: {
+    phone: {
       type: String,
     },
     address: {
