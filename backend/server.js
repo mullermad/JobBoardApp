@@ -4,6 +4,7 @@ require("dotenv").config();
 const cors = require("cors");
 const connectToDB = require("./config/db_config");
 const userRouter = require("./Router/UserRouter");
+const employerRouter = require("./Router/EmployerRouter");
 const app = express();
 
 //for database connection
@@ -12,12 +13,8 @@ connectToDB();
 app.use(cors());
 app.use(express.json());
 app.use("/api/user/", userRouter);
-// app.use("/api/v1/groups", equbGroupRouter);
-// app.use("/api/v1/types", equbTypeRouter);
-// app.use("/api/v1/payment", paymentRouter);
-
+app.use("/api/employer/", employerRouter);
 // routes
-
 
 //server listen
 
